@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pacientes",
+  "info": {
+    "singularName": "paciente",
+    "pluralName": "pacientes",
+    "displayName": "Paciente",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nome": {
+      "type": "string"
+    },
+    "CPF": {
+      "type": "string",
+      "unique": true,
+      "required": true,
+      "maxLength": 11,
+      "minLength": 11
+    },
+    "RG": {
+      "type": "string",
+      "regex": "(^\\d{1,2}).?(\\d{3}).?(\\d{3})-?(\\d{1}|X|x$)",
+      "unique": true,
+      "maxLength": 9,
+      "minLength": 9
+    },
+    "NCarteira": {
+      "type": "string"
+    },
+    "Endereco": {
+      "type": "string"
+    },
+    "NResidencial": {
+      "required": true,
+      "type": "integer"
+    },
+    "Complemento": {
+      "type": "string"
+    },
+    "Telefone": {
+      "type": "string",
+      "regex": "(^[0-9]{2})?(\\s|-)?(9?[0-9]{4})-?([0-9]{4}$)",
+      "maxLength": 11,
+      "minLength": 11
+    },
+    "Foto": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}
