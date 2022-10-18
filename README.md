@@ -14,4 +14,4 @@ docker build -t face_servico .
 Rodar a imagem do Docker
 Inicie a imagem e encaminhe a porta 8080. Opcionalmente, vincule um diretório local a /root/faces para fornecer um local para imagens predefinidas que serão registradas na hora de início
 
-docker run -d -p8080:8080 -v faces:/root/faces facerec_service
+docker run -d -p8080:8080 -v faces:/root/faces face_servico
