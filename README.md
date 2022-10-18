@@ -8,7 +8,7 @@ Começando
 Buildar a imagem do Docker
 Comece criando a imagem docker com um nome definido. Isso pode demorar um pouco.
 
-docker build -t facerec_service .
+docker build -t face_servico .
 
 
 Rodar a imagem do Docker
