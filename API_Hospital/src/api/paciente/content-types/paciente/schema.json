@@ -48,13 +48,8 @@
       "maxLength": 11,
       "minLength": 11
     },
-    "Foto": {
-      "type": "media",
-      "multiple": true,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
+    "Encodeimagem": {
+      "type": "text"
     }
   }
 }
