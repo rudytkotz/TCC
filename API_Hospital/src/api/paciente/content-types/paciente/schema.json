@@ -48,16 +48,10 @@
       "maxLength": 11,
       "minLength": 11
     },
-    "Encodeimagem": {
-      "type": "text"
-    },
-    "fotos": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+    "base64": {
+      "type": "text",
+      "required": true,
+      "unique": true
     }
   }
 }
