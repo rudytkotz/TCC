@@ -15,13 +15,6 @@
     "Nome": {
       "type": "string"
     },
-    "CPF": {
-      "type": "string",
-      "unique": true,
-      "required": true,
-      "maxLength": 11,
-      "minLength": 11
-    },
     "RG": {
       "type": "string",
       "regex": "(^\\d{1,2}).?(\\d{3}).?(\\d{3})-?(\\d{1}|X|x$)",
@@ -52,6 +45,25 @@
       "type": "text",
       "required": true,
       "unique": true
+    },
+    "CPF": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 11,
+      "maxLength": 11
+    },
+    "ConsultaId": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::consulta-agendada.consulta-agendada",
+      "mappedBy": "CPF"
+    },
+    "consultaFeitas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::consulta.consulta",
+      "mappedBy": "CPF"
     }
   }
 }

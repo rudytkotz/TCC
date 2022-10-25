@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "consulta_agendadas",
+  "collectionName": "consultas",
   "info": {
-    "singularName": "consulta-agendada",
-    "pluralName": "consulta-agendadas",
-    "displayName": "ConsultaAgendada",
-    "description": ""
+    "singularName": "consulta",
+    "pluralName": "consultas",
+    "displayName": "Consulta"
   },
   "options": {
     "draftAndPublish": true
@@ -13,16 +12,13 @@
   "pluginOptions": {},
   "attributes": {
     "TipoConsulta": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "DataConsulta": {
-      "required": true,
       "type": "datetime"
     },
     "Setor": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "Andar": {
       "type": "string"
@@ -31,7 +27,7 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::paciente.paciente",
-      "inversedBy": "ConsultaId"
+      "inversedBy": "consultaFeitas"
     }
   }
 }
